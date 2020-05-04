@@ -1,5 +1,8 @@
 package com.pluralsight.controller;
 
-public class LoginController extends ObjectL {
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class LoginController  {
 
 }
