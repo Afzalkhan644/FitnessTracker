@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  <head>
-    <meta charset="utf-8">
-    <title>
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le styles -->
+<!DOCTYPE link PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<HEAD>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <style>
       body { padding-top: 60px; /* 60px to make the container go all the way
@@ -27,45 +26,76 @@
     <style>
     </style>
   </head>
-  <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
+</HEAD>
+<BODY>
+
+
+<div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="Register.html">
-           Register
+          Login
           </a>
           <ul class="nav">
           </ul>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="hero-unit">
-        <div>
-          <h1>
-            Welcome to Fitness Tracker!
-          </h1>
-          <p>
-            To get started, we need to enter a goal for what we want to exercise for
-            today.
-          </p>
-        </div>
-        <a class="btn btn-primary" href="addGoal.html">
-          Add Goal »
-        </a>
-        
-        <a class="btn btn-primary" href="addMinutes.html">
-          Add Exercise Minutes »
-        </a>
-      </div>
+
+
+<div class="container">
       <div>
+        <h1>
+        Login
+        </h1>
+       
+      </div>
+
+
+
+
+
+
+<form:form commandName="User">
+		<form:errors path="*" cssClass="errorblock" element="div" />
+			<label for="textinput1">
+	          Enter UserName:
+	        </label>	
+			<form:input path="name" cssErrorClass="error" />
+			<form:errors path="name" cssClass="error" />
+			<br/>
+			<label for="textinput2">
+	          Enter Password:
+	        </label>	
+			<form:input path="password" cssErrorClass="error" />
+			<form:errors path="password" cssClass="error" />
+			<br/>
+			
+			
+			<input type="submit" class="btn" value="Login"/>
+	  </form:form>
+     
+      <div class="control-group">
       </div>
     </div>
-    
-    <script src="jquery-1.8.3.js">
+
+     <script src="jquery-1.8.3.js">
     </script>
-    
     <script src="assets/js/bootstrap.js">
     </script>
-  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</BODY>
 </html>

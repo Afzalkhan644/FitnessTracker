@@ -41,6 +41,7 @@
 		<servlet-name>fitTrackerServlet</servlet-name>
 		<url-pattern>*.json</url-pattern>
 	</servlet-mapping>
+		
 	
 	<display-name>Archetype Created Web Application</display-name>
 </web-app>
