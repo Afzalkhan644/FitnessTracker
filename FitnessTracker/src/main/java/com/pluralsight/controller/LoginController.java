@@ -22,9 +22,9 @@ public class LoginController  {
 
 public String Login(Model model) {
 	User user = new User();
-
-	model.addAttribute("name", user);
-	model.addAttribute("password",user);
+model.addAttribute(user);
+	model.addAttribute("name", user.getName());
+	model.addAttribute("password",user.getPassword());
 	
 	return "Login";
 }

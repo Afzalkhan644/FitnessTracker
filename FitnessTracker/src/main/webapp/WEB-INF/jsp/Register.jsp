@@ -1,3 +1,8 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>    
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -44,43 +49,42 @@
 <article class="card-body mx-auto" style="max-width: 400px;">
 	<h4 class="card-title mt-3 text-center">Create Account</h4>
     </p>
-	<form>
-	<div class="form-group input-group">
-		<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="Full name" type="text">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		 </div>
-        <input name="" class="form-control" placeholder="password" type="password">
-    </div> <!-- form-group// -->
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fas fa-weight"></i></span>
-		</div>
-		<select class="custom-select" style="max-width: 120px;">
-		    <option selected="">Kg</option>
-		    <option value="1">lbs</option>
+	<form:form commandName="User">
+      	<form:errors path="*" cssClass="errorblock" element="div" />
+	
+	
+		 	<form:input path="name" cssErrorClass="error" class="form-control" placeholder="Full name" type="text" />
+			<form:errors path="name" cssClass="error"  class="form-control"/>
+ 
+    	
+        <form:input path="password" cssErrorClass="error" class="form-control" placeholder="Password" type="password" />
+			<form:errors path="name" cssClass="error"  class="form-control"/>
+
+    	<div class="input-group-prepend" >
+    	
+    	
+    	
+		  <select class="custom-select" style="max-width: 120px;">
+		    <option label="Kg">Kg</option>
+		    <option  label="lbs">lbs</option>
+		    </select>
+		 
 		    
-		</select>
-    	<input name="" class="form-control" placeholder="Weight" type="Number">
-    </div> <!-- form-group// -->
+		         <form:input path="weight" cssErrorClass="error" class="form-control" placeholder="Weight" type="number" />
+		
+    </div> 
 
 
 
- <div class="form-group input-group">
     	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fas fa-chart-line"></i></span>
-		</div>
+		  
 		<select class="custom-select" style="max-width: 120px;">
-		    <option selected="">Feet</option>
-		    <option value="1">Inches</option>
-		    
-		</select>
+		    <option label="Feet" >Feet</option>
+		    <option label="Inches">Inches</option>
+		 </select>    
+		
     	<input name="" class="form-control" placeholder="Height" type="Number">
+  
     </div> <!-- form-group// -->
 
 
@@ -101,7 +105,7 @@
         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
     </div> <!-- form-group// -->      
     <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
-</form>
+	</form:form>
 </article>
 </div> <!-- card.// -->
 
